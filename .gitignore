@@ -117,6 +117,9 @@ replay_pid*
 # *.iml
 # *.ipr
 
+# Added by Mohaymin
+.idea/vcs.xml
+
 # CMake
 cmake-build-*/
 
