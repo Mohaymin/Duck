@@ -44,7 +44,7 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 
     implementation("org.springframework.boot:spring-boot-starter")
-    runtimeOnly("com.oracle.database.jdbc:ojdbc11")
+    runtimeOnly("com.microsoft.sqlserver:mssql-jdbc")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
