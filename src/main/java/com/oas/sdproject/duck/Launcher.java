@@ -1,5 +1,6 @@
 package com.oas.sdproject.duck;
 
+import com.oas.sdproject.duck.constants.DbConnection;
 import javafx.application.Application;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -13,9 +14,9 @@ public class Launcher {
         System.out.println("Preparing to start the database");
 
         String connectionUrl = "jdbc:sqlserver://localhost:1433;" +
-                "databaseName=Duck;" +
-                "user=sa;" +
-                "password=sa;" +
+                "databaseName=" + DbConnection.DATABASE_NAME + ";" +
+                "user=" + DbConnection.USERNAME + ";" +
+                "password=" + DbConnection.PASSWORD + ";" +
                 "encrypt=true;" +
                 "trustServerCertificate=true;";
 
