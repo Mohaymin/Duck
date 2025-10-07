@@ -30,8 +30,8 @@ public class Launcher {
         catch (SQLException e) {
             System.out.println("connection failed");
             e.printStackTrace();
+            Application.launch(DbErrorApplication.class, e.getMessage());
         }
 
-        Application.launch(HelloApplication.class, args);
     }
 }

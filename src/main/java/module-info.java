@@ -7,4 +7,5 @@ module com.oas.sdproject.duck {
 
     opens com.oas.sdproject.duck to javafx.fxml;
     exports com.oas.sdproject.duck;
+    opens com.oas.sdproject.duck.error_view to javafx.fxml;
 }
