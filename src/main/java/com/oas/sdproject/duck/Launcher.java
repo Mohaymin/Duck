@@ -25,6 +25,7 @@ public class Launcher {
             System.out.println("((((((((((((((((((())))))))))))))))))");
             System.out.println("Connection seems to be successful");
             System.out.println("((((((((((((((((((())))))))))))))))))");
+            Application.launch(LoginApplication.class, args);
         }
         // Handle any errors that may have occurred.
         catch (SQLException e) {

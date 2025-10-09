@@ -3,9 +3,9 @@ module com.oas.sdproject.duck {
     requires javafx.fxml;
     requires spring.boot.autoconfigure;
     requires java.sql;
+    requires javafx.graphics;
 
 
     opens com.oas.sdproject.duck to javafx.fxml;
     exports com.oas.sdproject.duck;
-    opens com.oas.sdproject.duck.error_view to javafx.fxml;
 }
