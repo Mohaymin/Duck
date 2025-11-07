@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.oas.sdproject"
-version = "0.0.1-SNAPSHOT"
+version = "1.0-SNAPSHOT"
 description = "Spring boot code for the backend of Duck UI"
 
 java {
