@@ -40,6 +40,14 @@ public class DashboardController {
         }
     }
 
+    public void onViewInsightsButtonClicked(ActionEvent actionEvent) {
+        try {
+            switchToInsightsScene(actionEvent);
+        } catch (IOException e) {
+            System.out.println("Error viewing insights");
+        }
+    }
+
     @javafx.fxml.FXML
     public void onLogOutButtonClicked(ActionEvent actionEvent) {
         try {
@@ -57,4 +65,13 @@ public class DashboardController {
         window.setScene(scene2);
         window.show();
     }
+    public void switchToInsightsScene(ActionEvent event) throws IOException {
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("insights-view.fxml")));
+        Scene scene2 = new Scene(scene2Parent);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene2);
+        window.show();
+    }
+
 }

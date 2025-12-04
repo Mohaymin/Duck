@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment = "CENTER" xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.oas.sdproject.duckui.DashboardController"
-            prefHeight="400.0" prefWidth="600.0">
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oas.sdproject.duckui.DashboardController">
 
     <children>
         <Button fx:id="createTaskButton" mnemonicParsing="false" onAction="#onCreateTaskButtonClicked" text="Create Task" />
+      <Button fx:id="insightsButton" mnemonicParsing="false" onAction="#onViewInsightsButtonClicked" text="View Insights">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Button>
     </children>
 
 </VBox>

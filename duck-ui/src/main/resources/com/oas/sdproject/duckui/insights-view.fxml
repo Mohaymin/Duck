@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oas.sdproject.duckui.InsightsController">
+   <children>
+      <Label graphicTextGap="0.0" text="Project Insights">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <BarChart fx:id="statusChart" minHeight="300.0" title="Current Status of Tasks">
+              <xAxis>
+                <CategoryAxis fx:id="statusAxis" label="Task Status" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="totalAxis" side="LEFT" />
+              </yAxis>
+               <HBox.margin>
+                  <Insets right="25.0" />
+               </HBox.margin>
+            </BarChart>
+            <LineChart fx:id="completedChart" minHeight="300.0" title="Tasks Completed Over Time">
+              <xAxis>
+                <CategoryAxis fx:id="dateAxis" label="Date" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="completedAxis" label="Tasks Completed" side="LEFT" />
+              </yAxis>
+               <HBox.margin>
+                  <Insets left="25.0" />
+               </HBox.margin>
+            </LineChart>
+         </children>
+         <VBox.margin>
+            <Insets left="25.0" right="25.0" top="25.0" />
+         </VBox.margin>
+      </HBox>
+      <Button fx:id="backButton" mnemonicParsing="false" onAction="#onBackButtonClicked" text="Back">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin></Button>
+   </children>
+</VBox>

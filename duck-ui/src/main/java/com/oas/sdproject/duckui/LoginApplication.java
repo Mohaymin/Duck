@@ -45,7 +45,7 @@ public class LoginApplication extends Application {
 
         Image icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/assets/images/ic_duck.png")));
         Scene scene = new Scene(root, 400, 600);
-        stage.setTitle("Login");
+        //stage.setTitle("Login");
         stage.setScene(scene);
         stage.getIcons().add(icon);
         stage.show();
