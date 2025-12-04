@@ -39,6 +39,13 @@ public class LoginController {
         String password = passwordField.getText();
         System.out.println("Email: " + email);
         System.out.println("Password: " + password);
+
+        try {
+            switchToDashboardScene(actionEvent);
+        }
+        catch (IOException e) {
+            System.out.println("Couldn't load dashboard");
+        }
     }
 
     @javafx.fxml.FXML
@@ -54,7 +61,16 @@ public class LoginController {
         Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("registration-view.fxml")));
         Scene scene2 = new Scene(scene2Parent);
 
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene2);
+        window.show();
+    }
+
+    public void switchToDashboardScene(ActionEvent event) throws IOException {
+        Parent scene2Parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("dashboard-view.fxml")));
+        Scene scene2 = new Scene(scene2Parent);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene2);
         window.show();
     }
