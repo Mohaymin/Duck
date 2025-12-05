@@ -39,6 +39,7 @@ javafx {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.16.1")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")

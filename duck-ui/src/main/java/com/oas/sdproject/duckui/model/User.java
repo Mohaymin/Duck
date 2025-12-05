@@ -1,32 +1,13 @@
-package com.oas.sdproject.model;
+package com.oas.sdproject.duckui.model;
 
-import jakarta.persistence.*;
-
-@Entity
-@Table(name = "users")
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    @Column(name="first_name")
     private String firstName;
-
-    @Column(name="last_name")
     private String lastName;
     private String email;
     private String password;
-
-    @Column(name="phone_number")
     private String phoneNumber;
-
     private Boolean isDeleted;
-
-    /*
-     * We need the empty constructor so that JSON parsers
-     * can parse this object to JSON
-     */
-    public User() {}
 
     public User(String firstName, String lastName, String email, String password, String phoneNumber) {
         this.firstName = firstName;
@@ -101,4 +82,5 @@ public class User {
     public void setDeleted(Boolean deleted) {
         isDeleted = deleted;
     }
+
 }

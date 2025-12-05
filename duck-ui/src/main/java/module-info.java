@@ -6,6 +6,8 @@ module com.oas.sdproject.duckui {
     requires spring.context;
     requires javafx.graphics;
     requires javafx.base;
+    requires java.net.http;
+    requires com.fasterxml.jackson.databind;
 
 
     opens com.oas.sdproject.duckui to javafx.fxml;
