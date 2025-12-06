@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
-<VBox xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.oas.sdproject.duckui.LoginController"
-      alignment="CENTER" prefHeight="600.0" prefWidth="400.0">
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oas.sdproject.duckui.LoginController">
     <ImageView fx:id="icon" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
         <Image url="@../../../../assets/images/ic_duck.png" />
+      <VBox.margin>
+         <Insets bottom="25.0" />
+      </VBox.margin>
     </ImageView>
     <TextField fx:id="emailField" promptText="Email">
         <VBox.margin>
@@ -25,7 +21,7 @@
         <VBox.margin>
             <Insets bottom="10.0" left="40.0" right="40.0" top="10.0" />
         </VBox.margin></PasswordField>
-    <Button fx:id="loginButton" mnemonicParsing="false" onAction="#onLoginButtonClicked" style="-fx-background-color: #4e87ff;" text="Login" textAlignment="CENTER">
+    <Button fx:id="loginButton" mnemonicParsing="false" onAction="#onLoginButtonClicked" style="-fx-background-color: #fca100;" text="Login" textAlignment="CENTER">
         <VBox.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
         </VBox.margin>
