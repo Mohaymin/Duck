@@ -40,21 +40,6 @@ public class LoginController {
     }
 
     @javafx.fxml.FXML
-    public void onLoginButtonClicked(ActionEvent actionEvent) {
-        String email = emailField.getText();
-        String password = passwordField.getText();
-        System.out.println("Email: " + email);
-        System.out.println("Password: " + password);
-
-        try {
-            switchToDashboardScene(actionEvent);
-        }
-        catch (IOException e) {
-            System.out.println("Couldn't load dashboard");
-        }
-    }
-
-    @javafx.fxml.FXML
     public void onRegistrationLinkClicked(ActionEvent actionEvent) {
         try {
             switchToRegistrationScene(actionEvent);
@@ -82,7 +67,7 @@ public class LoginController {
     }
 
     @FXML
-    protected void handleLoginAction() {
+    protected void handleLoginAction(ActionEvent actionEvent) {
         String email = emailField.getText();
         String password = passwordField.getText();
 
@@ -108,7 +93,7 @@ public class LoginController {
             if (response.statusCode() == 200) {
 //                messageLabel.setText("Login Successful! Welcome, " + username + ".");
                 System.out.println("Login successful! Welcome, " + email + ".");
-                // TODO: Load the main CRUD application view here
+                switchToDashboardScene(actionEvent);
             } else if (response.statusCode() == 401) {
 //                messageLabel.setText("Login Failed: Invalid Credentials.");
                 System.out.println("Login Failed: Invalid Credentials.");
