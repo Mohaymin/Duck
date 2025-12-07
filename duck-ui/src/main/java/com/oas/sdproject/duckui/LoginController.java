@@ -1,6 +1,7 @@
 package com.oas.sdproject.duckui;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.oas.sdproject.duckui.utils.Constants;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,7 +24,7 @@ import java.util.Objects;
 
 public class LoginController {
     private final HttpClient httpClient = HttpClient.newHttpClient();
-    private final String API_BASE_URL = "http://localhost:8080/api/auth";
+    private final String API_BASE_URL = Constants.BASE_URL + "auth";
     @javafx.fxml.FXML
     private ImageView icon;
     @javafx.fxml.FXML
@@ -108,7 +109,7 @@ public class LoginController {
         }
     }
 
-    class UserPost {
+    private static class UserPost {
         private String email;
         private String password;
 

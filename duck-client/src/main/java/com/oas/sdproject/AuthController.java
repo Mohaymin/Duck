@@ -25,10 +25,9 @@ public class AuthController {
     @PostMapping("/register")
     public ResponseEntity<String> registerUser(@RequestBody User newUser) {
         if (userRepository.findByEmail(newUser.getEmail()).isPresent()) {
-            return new ResponseEntity<>("Username is already taken!", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("An account with this email already exists!", HttpStatus.BAD_REQUEST);
         }
-
-        // IMPORTANT: In a real app, hash the password before saving!
+        // hash the password before saving!
         userRepository.save(newUser);
         return new ResponseEntity<>("User registered successfully!", HttpStatus.CREATED);
     }
