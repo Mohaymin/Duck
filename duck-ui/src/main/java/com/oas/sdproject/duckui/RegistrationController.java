@@ -1,8 +1,8 @@
 package com.oas.sdproject.duckui;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.oas.sdproject.duckui.utils.Constants;
-import com.oas.sdproject.duckui.utils.TextUtilities;
+import java.utils.Constants;
+import java.utils.TextUtilities;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

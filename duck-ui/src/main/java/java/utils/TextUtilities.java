@@ -1,4 +1,4 @@
-package com.oas.sdproject.duckui.utils;
+package java.utils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
